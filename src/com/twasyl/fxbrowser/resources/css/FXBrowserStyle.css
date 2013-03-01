@@ -1,0 +1,35 @@
+.squareStyle {
+     -fx-background-insets: 0;
+    -fx-background-radius: 0;
+
+    -fx-border-insets: 0;
+    -fx-border-radius: 0;
+
+    -fx-border-width: 0;
+}
+
+.searchButton {
+    -fx-background-image: url('../images/search.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+
+    -fx-border-width: 0;
+    -fx-border-style: none;
+
+    -fx-background-color: lightgray;
+}
+
+.openButton {
+    -fx-background-image: url('../images/open.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-color: transparent;
+}
+
+.searchField {
+    -fx-border-width: 0;
+    -fx-border-style: none;
+}
+.searchBar {
+    -fx-border-color: gray;
+}

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.web.*?>
+<?import java.net.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" prefHeight="700" prefWidth="1000"
+            fx:controller="com.twasyl.fxbrowser.controllers.FXBrowserController">
+    <stylesheets>
+        <URL value="@/com/twasyl/fxbrowser/resources/css/FXBrowserStyle.css"/>
+    </stylesheets>
+
+    <top>
+        <ToolBar fx:id="toolBar" style="-fx-background-color: gray;">
+            <items>
+                <HBox spacing="0" styleClass="searchBar">
+                    <children>
+                        <TextField promptText="Enter a URL"
+                                   prefHeight="25" prefColumnCount="30"
+                                fx:id="urlField" onKeyPressed="#urlTextFieldKeyPressed">
+                            <styleClass>
+                                <String fx:value="squareStyle"/>
+                                <String fx:value="searchField"/>
+                            </styleClass>
+                        </TextField>
+                        <Button onAction="#openUrl" prefWidth="25" prefHeight="25">
+                            <styleClass>
+                                <String fx:value="squareStyle"/>
+                                <String fx:value="searchButton"/>
+                            </styleClass>
+                        </Button>
+                    </children>
+                </HBox>
+                <Button  onAction="#openPresentation" prefWidth="25" prefHeight="25">
+                    <styleClass>
+                        <String fx:value="squareStyle"/>
+                        <String fx:value="openButton"/>
+                    </styleClass>
+                </Button>
+            </items>
+        </ToolBar>
+    </top>
+
+    <left></left>
+
+    <center>
+        <WebView fx:id="presentationView"
+                 onDragOver="#webViewDragOver"
+                 onDragDropped="#webViewDragDropped"/>
+    </center>
+
+    <right></right>
+
+    <bottom></bottom>
+
+</BorderPane>
